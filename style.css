@@ -707,6 +707,53 @@ display: flex;
 gap: 32px;
 }
 
+.pricing-card {
+flex: 1;
+min-width: 280px;
+border: 1px solid #e2e8f0;
+border-radius: 8px;
+background: #fff;
+overflow: hidden;
+display: flex;
+flex-direction: column;
+}
+
+.pricing-card__top,
+.pricing-card__middle,
+.pricing-card__bottom {
+padding: 32px;
+text-align: center;
+}
+
+.pricing-card__top {
+border-bottom: 1px solid #e2e8f0;
+}
+
+.pricing-card__middle {
+border-bottom: 1px solid #e2e8f0;
+}
+
+.pricing-card__name {
+font-size: 20px;
+font-weight: 700;
+margin-bottom: 16px;
+}
+
+.pricing-card__price {
+font-size: 48px;
+font-weight: 700;
+margin-bottom: 12px;
+}
+
+.pricing-card__billing {
+font-size: 16px;
+font-weight: 700;
+letter-spacing: 2px;
+color: #a0aec0;
+}
+
+
+
 
 #testimonials .row {
   display: flex;
