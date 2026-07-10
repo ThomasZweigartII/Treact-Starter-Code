@@ -752,6 +752,120 @@ letter-spacing: 2px;
 color: #a0aec0;
 }
 
+.pricing-card__target {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.pricing-card__feature {
+  font-size: 18px;
+  color: #718096;
+  margin-bottom: 20px;
+}
+
+.pricing-card__feature:last-child {
+  margin-bottom: 0;
+}
+
+.pricing-card__btn {
+  padding: 16px 32px;
+  border: none;
+  border-radius: 500px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 300ms ease;
+  min-width: 180px;
+}
+
+.pricing-card__btn:hover {
+  filter: brightness(1.05);
+}
+
+/* default side cards */
+.pricing-card__btn {
+  background: linear-gradient(135deg, #38b2ac, #81e6d9);
+  color: #fff;
+}
+
+/* right card button color */
+.pricing-card--enterprise .pricing-card__btn {
+  background: linear-gradient(135deg, #f56565, #feb2b2);
+  color: #fff;
+}
+
+/* center highlighted card */
+.pricing-card--business {
+  background: linear-gradient(135deg, #4c51bf, #667eea);
+  color: #f7fafc;
+  transform: scale(1.03);
+}
+
+.pricing-card--business .pricing-card__top,
+.pricing-card--business .pricing-card__middle {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.pricing-card--business .pricing-card__billing,
+.pricing-card--business .pricing-card__feature {
+  color: #e2e8f0;
+}
+
+.pricing-card--business .pricing-card__btn {
+  background: #fff;
+  color: #6415ff;
+}
+
+.pricing-card {
+  position: relative;
+}
+
+.pricing-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+}
+
+/* default side card stripe (personal) */
+.pricing-card:not(.pricing-card--business):not(.pricing-card--enterprise)::before {
+  background: linear-gradient(135deg, #81e6d9, #38b2ac);
+}
+
+/* enterprise override (must come after default) */
+.pricing-card--enterprise::before {
+  background: linear-gradient(135deg, #fca5a5, #f56565);
+}
+
+/* no stripe for center business card */
+.pricing-card--business::before {
+  display: none;
+}
+
+.pricing__grid {
+  margin-top: 16px;
+}
+
+.pricing-card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.pricing-card--business {
+  box-shadow: 0 16px 40px rgba(76, 81, 191, 0.28);
+  z-index: 2;
+}
+
+.pricing-card__middle {
+  min-height: 270px;
+}
+
+.pricing-card__bottom {
+  padding-top: 28px;
+  padding-bottom: 36px;
+}
 
 
 
