@@ -867,6 +867,49 @@ color: #a0aec0;
   padding-bottom: 36px;
 }
 
+.pricing-card__name {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.pricing-card__price {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+
+.pricing-card__billing {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.pricing-card__target {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+
+.pricing-card__feature {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* business card text tuning */
+.pricing-card--business .pricing-card__name,
+.pricing-card--business .pricing-card__price,
+.pricing-card--business .pricing-card__target {
+  color: #f7fafc;
+}
+
 
 
 #testimonials .row {
