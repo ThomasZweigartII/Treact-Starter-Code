@@ -910,6 +910,11 @@ color: #a0aec0;
   color: #f7fafc;
 }
 
+.pricing-card__price {
+  font-size: 56px;
+  line-height: 1;
+}
+
 
 
 #testimonials .row {
