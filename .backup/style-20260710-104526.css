@@ -669,44 +669,27 @@ QUALITY WORK section place mark to reference classes for future styling. This se
   align-items: center;
 }
 
-#pricing {
-position: relative;
-}
 
-.pricing__header {
-text-align: center;
-max-width: 640px;
-margin: 0 auto 64px;
-}
 
-.pricing__label {
-font-size: 12px;
-font-weight: 700;
-letter-spacing: 3px;
-color: #6415ff;
-text-transform: uppercase;
-margin-bottom: 16px;
-}
 
-.pricing__heading {
-font-size: 48px;
-font-weight: 700;
-line-height: 1.2;
-margin-bottom: 24px;
-}
 
-.pricing__description {
-font-size: 18px;
-line-height: 1.75;
-color: #718096;
-}
 
-.pricing__grid {
-width: 100%;
-display: flex;
-gap: 32px;
-}
 
+
+
+
+
+
+
+
+
+
+
+
+
+TESTIMONIALS ↓
+
+*/
 
 #testimonials .row {
   display: flex;
