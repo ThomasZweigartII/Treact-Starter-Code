@@ -1,0 +1,774 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", system-ui;
+  color: #243e63;
+}
+
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.row {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.row__narrow {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.container {
+  padding: 96px 0;
+}
+
+.purple {
+  color: #6415ff;
+}
+
+section {
+  padding: 0 32px;
+}
+
+main {
+  margin-bottom: 96px;
+}
+
+/* 
+
+NAVBAR ↓
+
+*/
+
+nav {
+  display: flex;
+  padding-top: 32px;
+}
+
+.nav__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  padding-bottom: 4px;
+}
+
+.logo__img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo__text {
+  font-size: 24px;
+  font-weight: 700;
+  margin-left: 12px;
+  color: #6415ff;
+}
+
+.nav__links {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.nav__link {
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 300ms ease;
+}
+
+.nav__link:hover {
+  color: #6415ff;
+}
+
+.nav__buttons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.nav__btn {
+  padding: 12px 24px;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.nav__btn--primary {
+  background: #6415ff;
+  color: white;
+  border-radius: 500px;
+}
+
+.nav__btn--primary:hover {
+  filter: brightness(1.1);
+}
+
+.btn__menu {
+  display: none;
+  background: transparent;
+  border: none;
+  transition: all 300ms ease;
+}
+
+.btn__menu--svg:hover {
+  filter: invert(26%) sepia(94%) saturate(7476%) hue-rotate(261deg)
+    brightness(94%) contrast(115%);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 378px;
+  margin: 24px 16px;
+  padding: 32px;
+  background-color: #fff;
+  border: 1px solid rgb(229, 231, 235);
+  border-radius: 8px;
+  z-index: 4;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(300%);
+  transition: all 300ms ease;
+}
+
+.modal__links {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal__link {
+  color: #1a202c;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 8px 0;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.modal__link--primary {
+  color: #f7fafc;
+  padding: 12px 32px;
+  background: #6415ff;
+  border-radius: 500px;
+  border: none;
+}
+
+.menu--open .modal {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.btn__menu--close {
+  position: fixed;
+  top: 24px;
+  right: 18px;
+}
+
+/* 
+
+HEADER / ABOUT US ↓
+
+*/
+
+header .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 64px;
+  width: 100%;
+}
+
+.header__text {
+  flex: 1;
+  max-width: 560px;
+}
+
+.header__heading {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.header__description {
+  font-size: 18px;
+  line-height: 1.75;
+  color: #4a5568;
+  margin-bottom: 32px;
+}
+
+.header__input-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.header__input {
+  flex: 1;
+  min-width: 240px;
+  padding: 16px 20px;
+  border: 2px solid #e2e8f0;
+  border-radius: 500px;
+  font-size: 16px;
+  transition: border-color 300ms ease;
+}
+
+.header__input:focus {
+  outline: none;
+  border-color: #6415ff;
+}
+
+.header__input::placeholder {
+  color: #cbd5e0;
+}
+
+.header__btn {
+  padding: 16px 32px;
+  background: #6415ff;
+  color: white;
+  border: none;
+  border-radius: 500px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 300ms ease;
+  white-space: nowrap;
+}
+
+.header__btn:hover {
+  filter: brightness(1.1);
+}
+
+.header__image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero__img {
+  max-width: 100%;
+  height: auto;
+}
+
+.header__customers {
+  margin-top: 48px;
+}
+
+.header__customers--title {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #a0aec0;
+  margin-bottom: 16px;
+}
+
+.customers__img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 
+
+FEATURES section place mark to reference classes for future styling. This section is currently styled in the style.css file, but can be moved to a separate features.css file if desired.
+
+*/
+
+#features {
+  position: relative;
+}
+
+#features .row__narrow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.features__header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.features__label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #a0aec0;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.features__heading {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.features__description {
+  font-size: 18px;
+  line-height: 1.75;
+  color: #718096;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.features__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.feature-card {
+  flex: 1 1 calc(33.333% - 27px);
+  min-width: 250px;
+  padding: 40px;
+  background: #f7fafc;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 300ms ease;
+}
+
+.feature-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 8px;
+}
+
+.feature-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+.feature-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #718096;
+}
+
+/* 
+
+QUALITY WORK section place mark to reference classes for future styling. This section is currently styled in the style.css file, but can be moved to a separate quality.css file if desired.
+*/
+
+#quality {
+  position: relative;
+}
+
+#quality .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quality__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 64px;
+  width: 100%;
+}
+
+.quality__text {
+  flex: 1;
+  max-width: 560px;
+}
+
+.quality__label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #6415ff;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.quality__heading {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.quality__description {
+  font-size: 18px;
+  line-height: 1.75;
+  color: #4a5568;
+  margin-bottom: 32px;
+}
+
+.quality__btn {
+  padding: 16px 32px;
+  background: #6415ff;
+  color: white;
+  border: none;
+  border-radius: 500px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.quality__btn:hover {
+  filter: brightness(1.1);
+}
+
+.quality__image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.quality__img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* steps section place mark to reference classes for future styling. This section is currently styled in the style.css file, but can be moved to a separate steps.css file if desired.
+*/
+#steps {
+  position: relative;
+}
+
+#steps .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.steps__heading {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 40px;
+}
+
+.steps__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  gap: 64px;
+  width: 100%;
+}
+
+.steps__image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.steps__img {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.steps__text {
+  flex: 1;
+  max-width: 560px;
+}
+
+.steps__label {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.steps__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.step__number {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1;
+  color: #cbd5e0;
+  min-width: 56px;
+}
+
+.step__title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.step__description {
+  font-size: 14px;
+  line-height: 2;
+  color: #718096;
+  max-width: 320px;
+}
+
+
+ #values {
+  position: relative;
+}
+
+#values .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.values__heading {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 40px;
+}
+
+.values__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 64px;
+  width: 100%;
+}
+
+.values__description {
+  font-size: 18px;
+  line-height: 1.75;
+  color: #4a5568;
+  margin-bottom: 40px; /* space before values__list */
+}
+
+.values__list {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.value {
+  flex: 1;
+}
+
+.value__title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.value__title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.value__description {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #718096;
+}
+
+.value__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.value__icon--green {
+  background: #9ae6b4;
+  color: #22543d;
+}
+
+.value__icon--red {
+  background: #feb2b2;
+  color: #742a2a;
+}
+
+.values__btn {
+  padding: 16px 32px;
+  background: #6415ff;
+  color: white;
+  border: none;
+  border-radius: 500px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.values__btn:hover {
+  filter: brightness(1.1);
+}
+
+
+#pricing .row {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TESTIMONIALS ↓
+
+*/
+
+#testimonials .row {
+  display: flex;
+}
+
+/* 
+
+START / CALL TO ACTION ↓
+
+*/
+
+#start .row {
+  position: relative;
+  overflow: hidden;
+}
+
+/* 
+
+FOOTER ↓
+
+*/
+
+footer {
+  padding: 96px 32px;
+  background-color: rgb(100, 21, 255);
+  margin-bottom: -32px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 
+
+MOBILE RESPONSIVENESS ↓
+
+*/
+
+@media (max-width: 1280px) {
+  header .row {
+    align-items: flex-end;
+  }
+}
+
+@media (max-width: 1024px) {
+  .btn__menu {
+    display: block;
+  }
+  header .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer {
+    padding: 80px 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  #quality .row,
+  #values .row {
+    flex-direction: column-reverse;
+  }
+  #steps .row,
+  #testimonials .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  #pricing .row {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 80px 0;
+  }
+  .nav__logo {
+    margin: 8px 0;
+    padding-bottom: 4px;
+  }
+  main {
+    margin-bottom: 80px;
+  }
+}
