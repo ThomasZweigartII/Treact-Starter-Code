@@ -1006,7 +1006,68 @@ color: #a0aec0;
   font-size: 16px;
 }
 
+.testimonials__review-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
 
+.testimonials__review {
+  font-size: 18px;
+  line-height: 1.75;
+  color: #4a5568;
+  margin-bottom: 32px;
+}
+
+.testimonials__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.testimonials__person {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.testimonials__avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonials__person-name {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.testimonials__person-role {
+  font-size: 18px;
+  color: #718096;
+}
+
+.testimonials__controls {
+  display: flex;
+  gap: 12px;
+}
+
+.testimonials__arrow {
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: #edf2f7;
+  color: #6415ff;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.testimonials__arrow:hover {
+  background: #e2e8f0;
+}
 
 
 
