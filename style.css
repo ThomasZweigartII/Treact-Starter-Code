@@ -917,9 +917,94 @@ color: #a0aec0;
 
 
 
+
+
+
+#testimonials {
+  position: relative;
+}
+
 #testimonials .row {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.testimonials__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 64px;
+  width: 100%;
+}
+
+.testimonials__text {
+  flex: 1;
+  max-width: 560px;
+}
+
+.testimonials__label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #6415ff;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.testimonials__heading {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.testimonials__description {
+  font-size: 18px;
+  line-height: 1.75;
+  color: #4a5568;
+  margin-bottom: 32px;
+}
+
+.testimonials__btn {
+  padding: 16px 32px;
+  background: #6415ff;
+  color: white;
+  border: none;
+  border-radius: 500px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.testimonials__btn:hover {
+  filter: brightness(1.1);
+}
+
+.testimonials__image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.testimonials__img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* 
 
