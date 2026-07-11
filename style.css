@@ -995,6 +995,19 @@ color: #a0aec0;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
+.testimonials__stars {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.testimonials__stars .fa-star {
+  color: #f6ad55;
+  font-size: 16px;
+}
+
+
+
 
 
 
