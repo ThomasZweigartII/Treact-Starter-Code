@@ -722,6 +722,7 @@ QUALITY WORK section place mark to reference classes for future styling. This se
   font-size: 18px;
   line-height: 1.75;
   color: #718096;
+  max-width: 620px;
 }
 
 .pricing__grid {
@@ -742,6 +743,12 @@ QUALITY WORK section place mark to reference classes for future styling. This se
   flex-direction: column;
   position: relative;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.12);
 }
 
 .pricing-card__top,
@@ -789,6 +796,7 @@ QUALITY WORK section place mark to reference classes for future styling. This se
   font-size: 18px;
   color: #718096;
   margin-bottom: 20px;
+  line-height: 1.6;
 }
 
 .pricing-card__feature:last-child {
@@ -809,7 +817,8 @@ QUALITY WORK section place mark to reference classes for future styling. This se
 }
 
 .pricing-card__btn:hover {
-  filter: brightness(1.05);
+  filter: brightness(1.06);
+  transform: translateY(-1px);
 }
 
 /* right card button color */
@@ -825,6 +834,10 @@ QUALITY WORK section place mark to reference classes for future styling. This se
   transform: scale(1.03);
   box-shadow: 0 16px 40px rgba(76, 81, 191, 0.28);
   z-index: 2;
+}
+
+.pricing-card--business:hover {
+  transform: scale(1.03) translateY(-4px);
 }
 
 .pricing-card--business .pricing-card__top,
@@ -984,12 +997,14 @@ QUALITY WORK section place mark to reference classes for future styling. This se
   line-height: 1.75;
   color: #4a5568;
   margin-bottom: 32px;
+  max-width: 58ch;
 }
 
 .testimonials__bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 
 .testimonials__person {
@@ -999,10 +1014,11 @@ QUALITY WORK section place mark to reference classes for future styling. This se
 }
 
 .testimonials__avatar {
-  width: 80px;
-  height: 80px;
+  width: 76px;
+  height: 76px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center;
 }
 
 .testimonials__person-name {
@@ -1019,6 +1035,7 @@ QUALITY WORK section place mark to reference classes for future styling. This se
 .testimonials__controls {
   display: flex;
   gap: 12px;
+  flex-shrink: 0;
 }
 
 .testimonials__arrow {
@@ -1034,6 +1051,12 @@ QUALITY WORK section place mark to reference classes for future styling. This se
 
 .testimonials__arrow:hover {
   background: #e2e8f0;
+  transform: translateY(-1px);
+}
+
+.testimonials__arrow:focus-visible {
+  outline: 2px solid #6415ff;
+  outline-offset: 2px;
 }
 
 
@@ -1096,6 +1119,16 @@ MOBILE RESPONSIVENESS ↓
   footer {
     padding: 80px 32px;
   }
+  .pricing__grid {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .pricing-card {
+    max-width: 360px;
+  }
+  .testimonials__header {
+    gap: 40px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1111,6 +1144,38 @@ MOBILE RESPONSIVENESS ↓
   #pricing .row {
     margin-top: 40px;
   }
+  .pricing__heading,
+  .testimonials__heading {
+    font-size: 40px;
+  }
+  .pricing__description,
+  .testimonials__description,
+  .testimonials__review {
+    font-size: 16px;
+  }
+  .pricing__grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  .pricing-card,
+  .pricing-card--business {
+    width: 100%;
+    max-width: 420px;
+    transform: none;
+  }
+  .pricing-card:hover,
+  .pricing-card--business:hover {
+    transform: translateY(-2px);
+  }
+  .testimonials__text {
+    max-width: 100%;
+  }
+  .testimonials__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1123,5 +1188,27 @@ MOBILE RESPONSIVENESS ↓
   }
   main {
     margin-bottom: 80px;
+  }
+  .pricing__heading,
+  .testimonials__heading {
+    font-size: 32px;
+  }
+  .pricing-card__top,
+  .pricing-card__middle,
+  .pricing-card__bottom {
+    padding: 24px;
+  }
+  .pricing-card__price {
+    font-size: 44px;
+  }
+  .testimonials__avatar {
+    width: 64px;
+    height: 64px;
+  }
+  .testimonials__person-name {
+    font-size: 18px;
+  }
+  .testimonials__person-role {
+    font-size: 16px;
   }
 }
