@@ -7,6 +7,11 @@ function closeMenu() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+    initializeTestimonials();
+    initializeFaqs();
+});
+
+function initializeTestimonials() {
     const testimonialTitle = document.getElementById("testimonial-title");
     const testimonialText = document.getElementById("testimonial-text");
     const testimonialAvatar = document.getElementById("testimonial-avatar");
@@ -70,4 +75,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     renderTestimonial();
-});
+}
+
+function initializeFaqs() {
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    if (!faqItems.length) {
+        return;
+    }
+
+    faqItems.forEach(function (item) {
+        const questionButton = item.querySelector(".faq-item__question");
+
+        if (!questionButton) {
+            return;
+        }
+
+        questionButton.addEventListener("click", function () {
+            const isOpen = item.classList.contains("faq-item--open");
+            item.classList.toggle("faq-item--open", !isOpen);
+            questionButton.setAttribute("aria-expanded", String(!isOpen));
+        });
+    });
+}
