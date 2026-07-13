@@ -62,6 +62,8 @@ nav {
   align-items: center;
   margin: 8px 0;
   padding-bottom: 4px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .logo__img {
@@ -75,6 +77,17 @@ nav {
   font-weight: 700;
   margin-left: 12px;
   color: #6415ff;
+  transition: color 250ms ease;
+}
+
+.nav__logo:hover .logo__text {
+  color: #4f46e5;
+}
+
+.nav__logo:focus-visible {
+  outline: 2px solid #6415ff;
+  outline-offset: 4px;
+  border-radius: 6px;
 }
 
 .nav__links {
@@ -84,14 +97,34 @@ nav {
 }
 
 .nav__link {
+  position: relative;
+  display: inline-block;
   font-size: 16px;
   font-weight: 500;
   text-decoration: none;
   transition: color 300ms ease;
 }
 
+.nav__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: #6415ff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms ease;
+}
+
 .nav__link:hover {
   color: #6415ff;
+}
+
+.nav__link:hover::after,
+.nav__link:focus-visible::after {
+  transform: scaleX(1);
 }
 
 .nav__buttons {
@@ -101,6 +134,8 @@ nav {
 }
 
 .nav__btn {
+  position: relative;
+  display: inline-block;
   padding: 12px 24px;
   border: none;
   background: transparent;
@@ -108,6 +143,24 @@ nav {
   font-weight: 600;
   cursor: pointer;
   transition: all 300ms ease;
+}
+
+.nav__btn:not(.nav__btn--primary)::after {
+  content: "";
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 8px;
+  height: 2px;
+  background: #6415ff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms ease;
+}
+
+.nav__btn:not(.nav__btn--primary):hover::after,
+.nav__btn:not(.nav__btn--primary):focus-visible::after {
+  transform: scaleX(1);
 }
 
 .nav__btn--primary {
@@ -1285,6 +1338,8 @@ margin-bottom: 6px;
 }
 
 .footer__link {
+  position: relative;
+  display: inline-block;
 color: #f7fafc;
 text-decoration: none;
 font-size: 18px;
@@ -1292,8 +1347,26 @@ font-weight: 500;
 transition: opacity 200ms ease;
 }
 
+.footer__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: rgba(247, 250, 252, 0.95);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms ease;
+}
+
 .footer__link:hover {
 opacity: 0.8;
+}
+
+.footer__link:hover::after,
+.footer__link:focus-visible::after {
+  transform: scaleX(1);
 }
 
 .footer__divider {
