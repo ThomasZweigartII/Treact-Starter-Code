@@ -1462,9 +1462,22 @@ MOBILE RESPONSIVENESS ↓
   .btn__menu {
     display: block;
   }
-  header .row {
+  .nav__links,
+  .nav__buttons {
+    display: none;
+  }
+  .header__content {
     flex-direction: column;
     align-items: center;
+    gap: 40px;
+  }
+  .header__text,
+  .header__image {
+    max-width: 100%;
+    width: 100%;
+  }
+  .header__text {
+    text-align: center;
   }
   footer {
     padding: 80px 32px;
@@ -1500,17 +1513,42 @@ MOBILE RESPONSIVENESS ↓
 }
 
 @media (max-width: 768px) {
-  #quality .row,
-  #values .row {
+  .quality__header,
+  .values__header {
     flex-direction: column-reverse;
+    gap: 40px;
   }
-  #steps .row,
-  #testimonials .row {
+  .steps__header,
+  .testimonials__header {
     flex-direction: column;
     align-items: center;
+    gap: 40px;
   }
   #pricing .row {
     margin-top: 40px;
+  }
+  .quality__text,
+  .values__text,
+  .steps__text,
+  .testimonials__text {
+    max-width: 100%;
+    text-align: center;
+  }
+  .steps__list {
+    gap: 24px;
+  }
+  .step {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+  .step__description {
+    max-width: 100%;
+  }
+  .values__list {
+    flex-direction: column;
+    gap: 24px;
   }
   .pricing__heading,
   .testimonials__heading {
@@ -1555,13 +1593,18 @@ MOBILE RESPONSIVENESS ↓
   .pricing-card--business:hover {
     transform: translateY(-2px);
   }
-  .testimonials__text {
-    max-width: 100%;
-  }
   .testimonials__bottom {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 16px;
+  }
+  .testimonials__person {
+    width: 100%;
+    justify-content: center;
+  }
+  .testimonials__controls {
+    width: 100%;
+    justify-content: center;
   }
   #start .row {
     padding: 48px 32px;
@@ -1612,12 +1655,29 @@ MOBILE RESPONSIVENESS ↓
   .container {
     padding: 80px 0;
   }
+  section {
+    padding: 0 16px;
+  }
   .nav__logo {
     margin: 8px 0;
     padding-bottom: 4px;
   }
   main {
     margin-bottom: 80px;
+  }
+  .header__heading,
+  .features__heading,
+  .quality__heading,
+  .steps__heading,
+  .values__heading {
+    font-size: 32px;
+  }
+  .header__description,
+  .features__description,
+  .quality__description,
+  .values__description,
+  .steps__description {
+    font-size: 16px;
   }
   .pricing__heading,
   .testimonials__heading {
